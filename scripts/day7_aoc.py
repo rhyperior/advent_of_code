@@ -55,7 +55,7 @@ def construct_file_tree(filename=None):
             commands = re.split(r'^\$|\n\$',f.read().strip())
         
         for command in commands[1:]:
-            if 'cd' == command.strip().split()[0]:   # leaving corner case of 'cd' appearing in filename.
+            if 'cd' == command.strip().split()[0]:
                 if '/' in command:
                     current_dir_name = 'root'
                     if root_node is None:
