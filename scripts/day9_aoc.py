@@ -91,8 +91,14 @@ def get_all_positions_of_nth_follower_node(filename=None):
             head_all_positions = follower_position_1[:]
             follower_position_1 = [[0,0]]
             all_positions_dict[i] = head_all_positions[:]
-            print('a')
+            # print('a')
+        
+        tenth_node_all_positions_set = set()
+        for i in all_positions_dict[9]:
+            tenth_node_all_positions_set.add(tuple(i))
+
         print('done')
+        return len(tenth_node_all_positions_set)
     except Exception as e:
         print("error in get_all_positions_of_nth_follower_node fn", str(e))
 
