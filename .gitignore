@@ -6,3 +6,6 @@ __pycache__/
 venv*/
 
 ownership*
+
+# Pickled files
+*.pkl
